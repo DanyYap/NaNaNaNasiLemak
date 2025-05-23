@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39ef9fe56891504dba4bb5fe8f11842, type: 3}
+  m_Name: PogoSettings
+  m_EditorClassIdentifier: 
+  minJumpForce: 15
+  maxJumpForce: 45
+  chargeSpeed: 15
+  rotateSpeed: 100
+  minBounceVelocity: 2
+  bounceMultiplier: 0.4
+  autoBalanceStrength: 10
+  maxTiltAngle: 60
+  tiltRecoverySpeed: 1
+  angularDrag: 2
+  centerOfMassOffset: {x: 0, y: 0, z: 0}
