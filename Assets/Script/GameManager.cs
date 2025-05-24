@@ -30,8 +30,8 @@ public class GameManager : MonoBehaviour
         // Switch camera priorities to trigger blend
         gameplayCam.Priority = 20;
         menuCam.Priority = 10;
-
-        // Re-enable player controls after camera transition (if needed)
-        // You can also delay enabling via coroutine or animation event
+        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
