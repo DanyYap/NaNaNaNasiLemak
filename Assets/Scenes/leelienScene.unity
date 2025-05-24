@@ -180,7 +180,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bb54562bc7dc46e46a229188ecea6a52, type: 2}
   m_sharedMaterial: {fileID: 2120258949404599751, guid: bb54562bc7dc46e46a229188ecea6a52, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2120258949404599751, guid: bb54562bc7dc46e46a229188ecea6a52, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -513,6 +514,7 @@ MonoBehaviour:
   - {fileID: 1315501866}
   moveSpeed: 2
   waitTime: 0.5
+  Player: {fileID: 0}
 --- !u!65 &598937162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1343,11 +1345,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: f514286b32cb57e449c0309e9149280e, type: 2}
+  jumpBarUI: {fileID: 0}
+  jumpBarFill: {fileID: 0}
   groundCheck: {fileID: 2037663259}
   groundRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  visualModel: {fileID: 0}
 --- !u!54 &1588819322
 Rigidbody:
   m_ObjectHideFlags: 0

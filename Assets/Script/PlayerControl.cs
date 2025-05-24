@@ -21,13 +21,6 @@ public class PlayerControl : MonoBehaviour
     public Transform groundCheck;
     public float groundRadius = 0.2f;
     public LayerMask groundLayer;
-
-    [SerializeField] private Transform visualModel;
-    
-    void LateUpdate()
-    {
-        visualModel.localScale = Vector3.one;
-    }
     
     void Start()
     {
