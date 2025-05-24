@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - text: Young Blood, welcome to this shitty planet.
-    audioClip: {fileID: 0}
-  - text: Well well well, look like young blood has grow up to a naughty Teen
-    audioClip: {fileID: 0}
-  - text: Look like someone playtimes is over, your tax and rental party has come.
-    audioClip: {fileID: 0}
-  - text: Every life away have an ending, including you.
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: cd4b9610d86bb754093a712ef4b5b117, type: 3}
+  - text: Well well well, look like young blood has grow up to a naughty Teenager
+    audioClip: {fileID: 8300000, guid: 95a4c607b14324d48b345b9ef41ef3a5, type: 3}
+  - text: "Welcome to the age where taxes and rent appear out of nowhere\u2026 and
+      your social life disappears\_just\_as\_fast."
+    audioClip: {fileID: 8300000, guid: c90b46467b043a44685557d654b4a341, type: 3}
+  - text: "All lives come to an end\u2026 yours included."
+    audioClip: {fileID: 8300000, guid: f73b4184d4b1cf24293941b2dd78a969, type: 3}
