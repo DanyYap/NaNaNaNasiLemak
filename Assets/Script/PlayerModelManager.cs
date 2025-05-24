@@ -11,24 +11,31 @@ public class PlayerModelManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this) Destroy(gameObject);
-        else Instance = this;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
 
         SetModel(0); // Start with Baby
     }
 
     public void SetModel(int index)
     {
-        if (index < 0 || index >= playerModels.Length) return;
-
-        // Disable all models
-        foreach (var model in playerModels)
+        if (index < 0 || index >= playerModels.Length)
         {
-            if (model != null) model.SetActive(false);
+            Debug.LogWarning($"Invalid model index: {index}");
+            return;
         }
 
-        // Enable the selected model
-        playerModels[index].SetActive(true);
+        for (int i = 0; i < playerModels.Length; i++)
+        {
+            playerModels[i].SetActive(i == index);
+        }
+
         currentModelIndex = index;
     }
 
