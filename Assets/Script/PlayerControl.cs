@@ -52,7 +52,7 @@ public class PlayerControl : MonoBehaviour
         HandleRotationInput();
         CheckGround();
         
-        if (transform.position.y < -20f) // <- Adjust the threshold to your world size
+        if (transform.position.y < -50f) // <- Adjust the threshold to your world size
         {
             Respawn();
         }
