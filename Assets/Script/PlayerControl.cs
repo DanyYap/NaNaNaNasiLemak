@@ -6,10 +6,15 @@ public class PlayerControl : MonoBehaviour
 {
     public PogoSettings settings;
 
+    [Header("Audio")]
+    public AudioSource pogoAudioSource;
+    [Range(0f, 1f)] public float jumpSoundProbability = 0.25f;
+    
     [Header("UI")]
     public GameObject jumpBarUI;
     public Image jumpBarFill;
     
+    private AudioSource pogoAudio;
     private Rigidbody rb;
     private float currentCharge = 0f;
     private float lastYVelocity;
@@ -29,6 +34,8 @@ public class PlayerControl : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.angularDamping = settings.angularDrag;
         rb.centerOfMass = settings.centerOfMassOffset;
+        
+        pogoAudio = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -102,6 +109,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space) && isCharging)
         {
             Jump();
+            
             isCharging = false;
             jumpBarUI.SetActive(false);
             settings.chargeSpeed = Mathf.Abs(settings.chargeSpeed);
@@ -119,6 +127,11 @@ public class PlayerControl : MonoBehaviour
 
         rb.AddForce(force, ForceMode.Impulse);
         currentCharge = 0f;
+        
+        if (pogoAudio != null && pogoAudio.clip != null)
+            pogoAudio.Play();
+        
+        PlayAgeSpecificJumpSound();
     }
 
     private void HandleRotationInput()
@@ -166,6 +179,36 @@ public class PlayerControl : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.FromToRotation(transform.forward, Vector3.up) * rb.rotation;
             rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * settings.tiltRecoverySpeed));
+        }
+    }
+    
+    private void PlayAgeSpecificJumpSound()
+    {
+        if (Random.value > jumpSoundProbability) return; // 50% chance
+
+        int modelIndex = PlayerModelManager.Instance.GetCurrentModelIndex();
+        AudioClip[] ageClips = null;
+
+        switch (modelIndex)
+        {
+            case 0:
+                ageClips = PlayerModelManager.Instance.babyJumpClips;
+                break;
+            case 1:
+                ageClips = PlayerModelManager.Instance.studentJumpClips;
+                break;
+            case 2:
+                ageClips = PlayerModelManager.Instance.adultJumpClips;
+                break;
+            case 3:
+                ageClips = PlayerModelManager.Instance.oldManJumpClips;
+                break;
+        }
+
+        if (ageClips != null && ageClips.Length > 0)
+        {
+            AudioClip clip = ageClips[Random.Range(0, ageClips.Length)];
+            pogoAudioSource.PlayOneShot(clip);
         }
     }
 

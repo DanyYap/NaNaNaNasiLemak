@@ -6,6 +6,10 @@ public class PlayerModelManager : MonoBehaviour
 
     [Header("Player Models in Order (Baby → OldMan)")]
     public GameObject[] playerModels; // 0: Baby, 1: Student, etc.
+    public AudioClip[] babyJumpClips;
+    public AudioClip[] studentJumpClips;
+    public AudioClip[] adultJumpClips;
+    public AudioClip[] oldManJumpClips;
 
     [Header("Effect")]
     public ParticleSystem modelChangeEffect;

@@ -313,11 +313,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5b3a4b056a2e63f46a3d942fbadce132, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.505
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5b3a4b056a2e63f46a3d942fbadce132, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.4
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5b3a4b056a2e63f46a3d942fbadce132, type: 3}
       propertyPath: m_LocalRotation.w
@@ -394,6 +394,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b3a4b056a2e63f46a3d942fbadce132, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8146837544917878197}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5b3a4b056a2e63f46a3d942fbadce132, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5134147946261172304}
   m_SourcePrefab: {fileID: 100100000, guid: 5b3a4b056a2e63f46a3d942fbadce132, type: 3}
 --- !u!1 &386324087562013409 stripped
 GameObject:
@@ -442,7 +445,7 @@ MonoBehaviour:
   settings: {fileID: 11400000, guid: f514286b32cb57e449c0309e9149280e, type: 2}
   jumpBarUI: {fileID: 0}
   jumpBarFill: {fileID: 0}
-  pogoAnimator: {fileID: 0}
+  pogoAnimator: {fileID: 1253316913745789366}
   groundCheck: {fileID: 2999157606559207468}
   groundRadius: 0.2
   groundLayer:
@@ -486,6 +489,103 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.17477345, y: 0.104817025, z: 1.4848231}
   m_Center: {x: -0.0010531247, y: 0, z: 0.74241155}
+--- !u!82 &5134147946261172304
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386324087562013409}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8ef840dcc91a6294cb9752149c53fe09, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8ef840dcc91a6294cb9752149c53fe09, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1015472764749860955 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5b3a4b056a2e63f46a3d942fbadce132, type: 3}

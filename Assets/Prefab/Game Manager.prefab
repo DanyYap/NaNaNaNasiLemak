@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 283031587530244844}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38, y: -4.5266924, z: -1.5655371}
-  m_LocalScale: {x: 1, y: 1, z: 3.8938}
+  m_LocalPosition: {x: 0, y: 14.39, z: -11.84}
+  m_LocalScale: {x: 150, y: 1, z: 150}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7634801184026294536}
@@ -52,8 +52,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.9610357, y: 1, z: 1}
-  m_Center: {x: 0.48051786, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &837339010618359436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,8 +97,8 @@ Transform:
   m_GameObject: {fileID: 1756242030818060925}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.71, y: -3.77, z: -1.5655371}
-  m_LocalScale: {x: 1, y: 1, z: 3.8938}
+  m_LocalPosition: {x: -3.42, y: 47.54, z: -50.21}
+  m_LocalScale: {x: 100, y: 1, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7634801184026294536}
@@ -122,8 +122,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.051176, y: 1, z: 1}
-  m_Center: {x: 0.52558804, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.9446907, z: 1}
+  m_Center: {x: 0, y: 0.027654648, z: 0}
 --- !u!114 &5025790424197656601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +167,8 @@ Transform:
   m_GameObject: {fileID: 6510435823227093995}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.9198341, y: -4.5266924, z: -1.5655371}
-  m_LocalScale: {x: 1, y: 1, z: 3.8938}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 50, y: 1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7634801184026294536}
@@ -237,8 +237,8 @@ Transform:
   m_GameObject: {fileID: 8098891305153243309}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.9, y: -3.12, z: -1.5655371}
-  m_LocalScale: {x: 1, y: 1, z: 3.8938}
+  m_LocalPosition: {x: 0, y: 81.12, z: 0}
+  m_LocalScale: {x: 200, y: 1, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7634801184026294536}
@@ -262,8 +262,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3058205, y: 1, z: 1}
-  m_Center: {x: 0.65291023, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8128991546220301096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 7925070930605699211}
   - component: {fileID: 5371228507074279523}
   - component: {fileID: 3622980695438448084}
+  - component: {fileID: 278656190194611350}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -308,7 +309,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8757728838301159736}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.8904, y: 4.3556275, z: -31.728989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -448,6 +449,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  babyJumpClips:
+  - {fileID: 8300000, guid: 078d0dcae6b3ff149b33e0b183127c06, type: 3}
+  studentJumpClips:
+  - {fileID: 8300000, guid: 0ed3f0a1742fb6442885e1a719814ed0, type: 3}
+  adultJumpClips:
+  - {fileID: 8300000, guid: dbced489ada1b1e4cba8227b0fc141fa, type: 3}
+  oldManJumpClips:
+  - {fileID: 8300000, guid: 2433777d810160044b31d3c57ae26adf, type: 3}
+  modelChangeEffect: {fileID: 0}
 --- !u!114 &3622980695438448084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,3 +474,21 @@ MonoBehaviour:
   startButton: {fileID: 0}
   menuCam: {fileID: 0}
   gameplayCam: {fileID: 0}
+--- !u!114 &278656190194611350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757728838301159736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d24a955636cbd4aa74ede1448683bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  heightThresholds:
+  - 0
+  - 14
+  - 46.5
+  - 80
