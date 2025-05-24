@@ -16,7 +16,6 @@ public class PlayerControl : MonoBehaviour
     private bool isCharging = false;
     private bool isGrounded = true;
     private bool isTiltingInput = false;
-    [SerializeField] private Animator pogoAnimator;
 
     [Header("Ground Check")]
     public Transform groundCheck;
@@ -44,11 +43,6 @@ public class PlayerControl : MonoBehaviour
         HandleJumpInput();
         HandleRotationInput();
         CheckGround();
-        
-        if (transform.position.y < -20f) // <- Adjust the threshold to your world size
-        {
-            Respawn();
-        }
     }
     
     private void OnCollisionEnter(Collision collision)
@@ -66,14 +60,6 @@ public class PlayerControl : MonoBehaviour
             transform.parent = null;
         }
     }
-    
-    private void Respawn()
-    {
-        // Set position to your designated respawn point
-        transform.position = new Vector3(0, 15, -15); // Replace with your desired respawn point
-        rb.linearVelocity = Vector3.zero;
-        rb.angularVelocity = Vector3.zero;
-    }
 
     private void HandleJumpInput()
     {
@@ -82,8 +68,6 @@ public class PlayerControl : MonoBehaviour
             isCharging = true;
             currentCharge = settings.minJumpForce;
             jumpBarUI.SetActive(true);
-    
-            pogoAnimator?.SetBool("isCharging", true);
         }
 
         if (Input.GetKey(KeyCode.Space) && isCharging)
@@ -104,9 +88,7 @@ public class PlayerControl : MonoBehaviour
             Jump();
             isCharging = false;
             jumpBarUI.SetActive(false);
-            settings.chargeSpeed = Mathf.Abs(settings.chargeSpeed);
-
-            pogoAnimator?.SetBool("isCharging", false);
+            settings.chargeSpeed = Mathf.Abs(settings.chargeSpeed); // Reset charge direction
         }
     }
 
