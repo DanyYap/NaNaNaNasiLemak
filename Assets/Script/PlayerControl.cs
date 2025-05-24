@@ -44,6 +44,11 @@ public class PlayerControl : MonoBehaviour
         HandleJumpInput();
         HandleRotationInput();
         CheckGround();
+        
+        if (transform.position.y < -20f) // <- Adjust the threshold to your world size
+        {
+            Respawn();
+        }
     }
     
     private void OnCollisionEnter(Collision collision)
@@ -60,6 +65,14 @@ public class PlayerControl : MonoBehaviour
         {
             transform.parent = null;
         }
+    }
+    
+    private void Respawn()
+    {
+        // Set position to your designated respawn point
+        transform.position = new Vector3(0, 15, -15); // Replace with your desired respawn point
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
     }
 
     private void HandleJumpInput()
