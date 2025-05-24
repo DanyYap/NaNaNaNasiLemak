@@ -15,7 +15,7 @@ MonoBehaviour:
   minJumpForce: 15
   maxJumpForce: 45
   chargeSpeed: 15
-  rotateSpeed: 100
+  rotateSpeed: 60
   minBounceVelocity: 2
   bounceMultiplier: 0.4
   autoBalanceStrength: 10
