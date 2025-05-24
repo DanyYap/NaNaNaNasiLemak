@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Cinemachine;
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     [Header("UI")]
     public Canvas mainMenuCanvas;
     public Button startButton;
-
+    
     [Header("Cinemachine Cameras")]
     public CinemachineCamera menuCam;
     public CinemachineCamera gameplayCam;
